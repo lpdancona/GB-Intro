@@ -16,13 +16,14 @@
   border-radius: 3px;
   padding: 10px 20px;
   cursor: pointer;
+  margin: 10px;
 }
 
 /* Dropdown menu */
 .dropdown-menu {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 10px;
   position: absolute;
   top: 100%;
   left: 0;
@@ -37,6 +38,7 @@
 .dropdown-menu li {
   padding: 10px 20px;
   cursor: pointer;
+  margin: 10px;
 }
 
 /* Show the dropdown menu when the button is clicked */
@@ -51,7 +53,7 @@
 
 /* Create Student form styles (if needed) */
 .create-student-form {
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .input-field {
@@ -106,4 +108,9 @@
   border-radius: 3px;
   padding: 10px 20px;
   cursor: pointer;
+}
+.student-btn a {
+  color: #fff;
+  margin-left: 10%;
+  list-style: none;
 }

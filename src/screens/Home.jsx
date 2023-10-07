@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { API, graphqlOperation } from "aws-amplify";
 import { createStudents, deleteStudents } from "../graphql/mutations";
 import { listStudents } from "../graphql/queries";
+import { Link } from "react-router-dom";
 import "./Home.css";
+import Navbar from "../components/Navbar";
 export default function Home() {
   const [studentName, setStudentName] = useState("");
   const [birthDate, setBirthDate] = useState("");
@@ -82,6 +84,7 @@ export default function Home() {
 
   return (
     <div>
+      <Navbar />
       <div className={`dropdown ${isDropdownOpen ? "open" : ""}`}>
         <button className="dropdown-button" onClick={toggleDropdown}>
           Create Intro
@@ -126,6 +129,9 @@ export default function Home() {
                     onClick={() => handleDeleteStudent(student.id)}
                   >
                     Delete
+                  </button>
+                  <button className="student-btn">
+                    <Link to={`/view/${student.id}`}>View</Link>
                   </button>
                 </div>
               </div>
